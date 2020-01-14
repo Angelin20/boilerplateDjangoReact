@@ -1,0 +1,131 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font: 10pt "Tahoma";
+  min-width: 300mm;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+[contenteditable="true"] {
+  background-color: LightGrey;
+}
+img {
+  width: 100%;
+}
+
+.page {
+  position: relative;
+  width: 297mm;
+  min-height: 384mm;
+  max-height: 384mm;
+  background: white;
+  border: 1px #d3d3d3 solid;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow: hidden;
+  background-size: 100% auto;
+  background-position-y: 911px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10mm auto;
+}
+.headerPage {
+  margin-top: 0px;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 192px;
+}
+.headerPage img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*opacity: .5;*/
+  top: 0;
+  left: 0;
+  bottom: -29px;
+}
+
+.futer {
+  margin-bottom: -2px;
+  position: absolute;
+  z-index: 0;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+.futer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*opacity: .5;*/
+  top: 0;
+  left: 0;
+  bottom: -29px;
+}
+.book {
+  margin-top: 0px;
+  width: 297mm;
+  margin: auto;
+}
+#root {
+  margin-top: 100px;
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
+@media print {
+  .morris-hover.morris-default-style,
+  .no_print {
+    display: none !important;
+  }
+  /** {margin:0;padding:0}*/
+  @page {
+    size: letter;
+    margin: 0mm;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  html {
+    background-color: red;
+  }
+  body {
+    background-color: green;
+  }
+  .page {
+    margin: 0 auto;
+  }
+  .margin {
+    margin: 0 auto;
+    margin-top: 0px;
+  }
+  #root {
+    margin-top: 0px;
+  }
+  .book {
+    margin-top: 0px;
+  }
+  [contenteditable="true"] {
+    background-color: LightGrey;
+  }
+  .futer {
+    margin-bottom: 0px;
+  }
+  .menu {
+    display: none !important;
+  }
+  .piePagina {
+    display: none !important;
+  }
+}
